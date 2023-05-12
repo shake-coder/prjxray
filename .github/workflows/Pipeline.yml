@@ -31,12 +31,13 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
       - name: checkout submodules
         run: |
           git submodule update --init --recursive
+          
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
           
       - name: Install
         run: |
@@ -107,13 +108,14 @@ jobs:
 
     steps:
 
+      - name: checkout submodules
+        run: |
+          git submodule update --init --recursive
+          
       - uses: actions/checkout@v3
         with:
           submodules: recursive
           
-      - name: checkout submodules
-        run: |
-          git submodule update --init --recursive
       - name: Install
         run: |
           DEBIAN_FRONTEND=noninteractive apt update -qq

@@ -97,7 +97,7 @@ jobs:
   Tests:
     container: ubuntu:focal
 
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: ubuntu-latest
 
     env:
       ALLOW_ROOT: true

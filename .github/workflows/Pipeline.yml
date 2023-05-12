@@ -33,7 +33,7 @@ jobs:
 
       - name: checkout submodules
         run: |
-          apt-get install -y git
+          apt-get update && apt-get install -y git
           git submodule update --init --recursive
           
       - uses: actions/checkout@v3
@@ -111,7 +111,7 @@ jobs:
 
       - name: checkout submodules
         run: |
-          apt-get install -y git
+          apt-get update && apt-get install -y git
           git submodule update --init --recursive
           
       - uses: actions/checkout@v3

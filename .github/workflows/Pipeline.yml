@@ -33,6 +33,7 @@ jobs:
 
       - name: checkout submodules
         run: |
+          sudo apt-get install git
           git submodule update --init --recursive
           
       - uses: actions/checkout@v3
@@ -110,6 +111,7 @@ jobs:
 
       - name: checkout submodules
         run: |
+          sudo apt-get install git
           git submodule update --init --recursive
           
       - uses: actions/checkout@v3
